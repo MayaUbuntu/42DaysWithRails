@@ -1,0 +1,148 @@
+---
+layout: post
+title: Installation Procedure
+---
+
+h2. What we have done so far:
+
+# Installation of Ubuntu
+# Installation of Git, MySQL, RVM, Ruby 1.9.3, and Rails 3.2.0
+# Reading from Programming Ruby: The Pragmatic Programmer's Guide
+# Reading from Agile Web Development with Rails
+
+*Installation of Ubuntu*
+
+p. The first step was installing Ubuntu. 
+
+p. We first tried installing Ubuntu from a USB Stick ("Download Ubuntu":http://www.ubuntu.com/download/ubuntu/download), but after installation was complete and Ubuntu was powered on, it just froze. So we had to find another alternative.
+
+p. So we decided to go for *Wubi*, Windows-based Ubuntu Installer, which allows you to install Ubuntu as a dual-boot with Windows, without the need to partition. 
+"Download Wubi":http://www.ubuntu.com/download/ubuntu/windows-installer. 
+"Help in installation of Ubuntu using Wubi":https://help.ubuntu.com/community/Wubi.
+
+p. And it worked! We were able to work on Ubuntu within Windows, it was fast and easy to manage. We installed Git, MySQL, RVM, Ruby, and Ruby on Rails. However after a week, we were faced with a problem. After choosing Ubuntu from the Windows-Start-Manager, we were stuck with a grub terminal:
+
+p. GNU GRUB version 1.99-12ubuntu5
+[Minimal BASH-like line editing is supported. For the first word, TAB lists possible command completions. Anywhere else TAB lists possible device / file completions.]
+
+p. Turns out it is a common problem that occurs when installing with Wubi, a couple of solutions where found online: "Boot Ubuntu from Grub Prompt":http://sazeit.com/articles/boot-ubuntu-from-grub-prompt, or "Missing Rootdisk Problem":http://ubuntu-with-wubi.blogspot.com/2011/08/missing-rootdisk.html. In our case, the rootdisk wasn't missing and the solutions weren't useful in our situation.
+
+p. The best path to take was to download *Oracle VM Box* and install Ubuntu from there. It may be slower, but at least we would be safe to know that it won't stop working out of the blue. To download Oracle VM Box, click "here":https://www.virtualbox.org/wiki/Downloads.
+
+p. After that, we installed Ubuntu 11.04 using the virtual machine. For a detailed description of the installation progress, check this out: "Install Ubuntu using VM":http://reviews.omabc.com/software/os/ubuntu/install-ubuntu-oracle-vm-virtualbox#install (it shows how you install Ubuntu 11.10, but it is the same steps.)
+
+*Installation of Git, MySQL, RVM, Rails, and Ruby*
+
+p. Now we are set! We started with the following installations:
+
+p. Before we started with the installations, we updated the major tool we are using and install the necessary dependencies:
+_> sudo apt-get update_
+_> sudo apt-get install apache2 curl build-essential_
+
+p. (From "Agile Web Development":http://pragprog.com/book/rails4/agile-web-development-with-rails, page 6,  and "Ryan Bigg's Website":http://ryanbigg.com/2010/12/ubuntu-ruby-rvm-rails-and-you/)
+
+*Git*
+
+p. We created an account on "Github:":https://github.com/. Github is a web-based hosting service for software development projects that use Git. Git is a free and open source distributed version control system.
+
+p. To install Git, follow the steps listed "here":http://help.github.com/linux-set-up-git/.
+
+*MySQL*
+
+p. To install MySQL, we ran the following commands in the command prompt:
+
+_> sudo apt-get install mysql-server mysql-client_
+_> sudo apt-get install libmysql-ruby_
+
+p. To check whether the MySQL server is running: 
+_> sudo netstat -tap | grep mysql_
+
+p. To access the MySQL server:
+_> mysql -u root -p_
+
+p. For more information check the following links:
+"How to Install MySQL on Ubuntu":http://ariejan.net/2007/12/12/how-to-install-mysql-on-ubuntudebian
+"Help.Ubuntu.com":https://help.ubuntu.com/8.04/serverguide/C/mysql.html
+
+*RVM*
+
+p. RVM is a Ruby Version Manager created by Wayne E. Seguin and is extremely helpful for installing and managing many different versions of Ruby all at once.
+
+p. _> bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)_
+
+p. The bashrc file is responsible for setting up our bash session which will load RVM:
+_> echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc_ 
+
+p. Reload the file: 
+_> . ~/.bashrc_
+_> rvm requirements_ 
+
+p. Supposing the output of the previous code was:
+
+p. For Ruby / Ruby HEAD (MRI, Rubinius, & REE), install the following:
+ruby: /usr/bin/apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
+
+p. Then we installed all the requirements:
+_> sudo apt-get install /usr/bin/apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion_ 
+
+p. And Tada! We have RVM installed. For more information and details concerning the process, check the again "Ryan Bigg's website":http://ryanbigg.com/2010/12/ubuntu-ruby-rvm-rails-and-you/.
+
+*Ruby*
+
+p. Now that we have RVM installed, installation of Ruby is a piece of cake.
+
+p. _> rvm install 1.9.3_
+_> rvm use 1.9.3_
+_> rvm --default use 1.9.3_
+
+p. (From "Agile Web Development with Rails":http://pragprog.com/book/rails4/agile-web-development-with-rails)
+
+*Rails*
+
+p. Before installing Rails we have to install RubyGems and then update it:
+
+p. _> sudo apt-get install rubygems_
+_> sudo gem update --system_
+
+p. - as shown on "Ubuntu Geek":www.ubuntugeek.com/how-to-install-ruby-on-rails-ror-in-ubuntu.html
+
+p. Now we can install Rails
+
+p. _> gem install rails -v 3.2.1_
+
+p. And we were done! We installed all the requirements and we have rails up and running. 
+
+*Reading from Programming Ruby: The Pragmatic Programmer's Guide*
+
+p. Check the book: "Programming Ruby":http://pragprog.com/book/ruby3/programming-ruby-1-9
+
+p. After all the installations were completed and our machine was set, I started reading a couple of chapters from Programming Ruby, in order to get a feel of the syntax and the language.
+
+p. The chapters covered:
+* Chapter 1: Getting Started
+* Chapter 2: Ruby.new
+* Chapter 3: Classes, Objects, and Variables
+* Chapter 4: Containers, Blocks, and Iterators 
+ 
+*Reading from Agile Web Development with Rails*
+
+p. Check the book: "Agile Web Development with Rails":http://pragprog.com/book/rails4/agile-web-development-with-rails
+
+p. With this book, I created my first Rails application, and learned more about Rails components: Model, Views, and Controller.
+
+p. The chapters covered:
+* Chapter 1: Installing Rails
+* Chapter 2: Instant Gratification
+* Chapter 3: The Architecture of Rails Applications
+* Chapter 4: Introduction to Ruby
+* Chapter 5: The Depot Application
+* Chapter 6: Creating the Application
+* Chapter 7: Validation and Unit Testing
+* Chapter 8: Catalog Display
+* Chapter 9: Cart Creation
+* Chapter 10: A Smarter Cart
+* Chapter 11: Add a Dash of AJAX
+* Chapter 12: Check Out!
+* Chapter 14: Logging In
+* Chapter 16: Deployment and Production
+* Chapter 17: Depot Retrospective 

@@ -1,0 +1,71 @@
+---
+layout: post
+title: Introduction
+---
+
+h1. Introduction
+
+p. We started this adventure on February 5th 2012. Up until today we used to meet around three times per week, work roughly around three hours per day. It was good, but not great because progress wasn't as fast as we hoped it to be. The time was enough for me to get hooked to this and want to learn more - which I think was Youssef's intent all along. 
+
+p. AND THEN, we thought of this brilliant idea where I would quit my job and bum it out on my friend's couch, until I learn the brilliant framework that is Ruby on Rails - with a deadline of a month. The things that you do for love. 
+
+h3. Who am I?
+
+p. My name is Maya Osseiran, a fresh graduate with a bachelor in the science of Computer and Communication Engineering. I always had a thing for programming languages. And Youssef, a Rails developer with experience working for startups around the world, has knowledge to spread around. So he decided to take me under his wing and see if I have what it takes to learn the framework. 
+
+h3. What do I expect from this?
+
+* To become a true web developer, with all the right skills and  logic. 
+* To master a skill.
+* Something challenging and worthwhile.
+* A place where I can progress.
+* To love Ruby on Rails and make it love me.
+* A job. A job. A job.
+
+h3. What does Youssef expect from this?
+
+* Train a young, gifted mind in software best practices.
+* Fill a much needed void in RoR developers around the MENA region.
+* Help Lebanon become a hub for talent and entrepreneurship.
+* Pay it Forward.
+ 
+
+h3. What am I supposed to learn within this month?
+
+p. *Software Development*
+
+	
+    # Agile software development (standups, iterations, stories etc...)
+    # Object Oriented Programming fundamentals
+    # Pair programming
+    # TDD and BDD (mocks, stubs, factories, fixtures)
+    # Refactoring existing/legacy code
+    # CRUD basic functions and APIs overview
+    # Collaboration (Git, Github)
+
+p. *Ruby and Rails*
+
+    # Object Oriented Ruby
+    # Ruby Syntax + Gems
+    # Rails MVC inside out (+ ActiveModel, ActiveRecord, ActionPack, ActionMailer and ActiveSupport)
+    # HAML - ERB (template engines)
+    # SASS - CSS
+    # Beginner Javascript (emphasis on jQuery)
+    # Debugging and Logging
+    # Dealing with files (parsing [csv], writing to PDF files using prawn)
+    # Authentication (Devise and CanCan)
+    # Resources to read and stay up to date with the latest (RailsCasts, Confreaks, Ruby/Rails books, Ruby Koans)
+
+
+p. *Infrastructure*
+
+    # Setting up a development environment
+    # Familiarity with basic UNIX commands
+    # PostgreSQL client/admin
+    # Deployment tools (brief overview Capistrano/Chef)
+
+-------
+
+p. So here I am, and here it is - a documentation of the internship where Youssef will teach me all about Ruby on Rails.
+
+

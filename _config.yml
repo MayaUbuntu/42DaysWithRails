@@ -1,2 +1,3 @@
-pygments:    false
-markdown:    rdiscount
+pygments:   false
+markdown:   redcarpet
+auto:       true
