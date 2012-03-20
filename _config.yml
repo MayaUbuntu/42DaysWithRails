@@ -8,7 +8,7 @@ auto:       true
 shorttitle : 42
 title: 42 Days with Rails
 
-production_url : http://MayaUbuntu.github.com
+production_url : http://warm-light-3984.herokuapp.com/
 
 author :
   name : Maya Osseiran
