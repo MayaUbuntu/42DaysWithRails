@@ -36,8 +36,7 @@ p. After that, we installed Ubuntu 11.04 using the virtual machine. For a detail
 p. Now we are set! We started with the following installations:
 
 p. Before we started with the installations, we updated the major tool we are using and install the necessary dependencies:
-_> sudo apt-get update_
-_> sudo apt-get install apache2 curl build-essential_
+<script src="https://gist.github.com/2137176.js?file=install-essentials.sh"></script>
 
 p. (From "Agile Web Development":http://pragprog.com/book/rails4/agile-web-development-with-rails, page 6,  and "Ryan Bigg's Website":http://ryanbigg.com/2010/12/ubuntu-ruby-rvm-rails-and-you/)
 
@@ -50,15 +49,10 @@ p. To install Git, follow the steps listed "here":http://help.github.com/linux-s
 *MySQL*
 
 p. To install MySQL, we ran the following commands in the command prompt:
+<script src="https://gist.github.com/2137176.js?file=install-mysql.sh"></script>
 
-_> sudo apt-get install mysql-server mysql-client_
-_> sudo apt-get install libmysql-ruby_
-
-p. To check whether the MySQL server is running: 
-_> sudo netstat -tap | grep mysql_
-
-p. To access the MySQL server:
-_> mysql -u root -p_
+p. To check whether the MySQL server is running and to access the server:
+<script src="https://gist.github.com/2137176.js?file=check-mysql.sh"></script>
 
 p. For more information check the following links:
 "How to Install MySQL on Ubuntu":http://ariejan.net/2007/12/12/how-to-install-mysql-on-ubuntudebian
@@ -68,14 +62,11 @@ p. For more information check the following links:
 
 p. RVM is a Ruby Version Manager created by Wayne E. Seguin and is extremely helpful for installing and managing many different versions of Ruby all at once.
 
-p. _> bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)_
-
 p. The bashrc file is responsible for setting up our bash session which will load RVM:
-_> echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc_ 
+<script src="https://gist.github.com/2137176.js?file=rvm-part1.sh"></script>
 
 p. Reload the file: 
-_> . ~/.bashrc_
-_> rvm requirements_ 
+<script src="https://gist.github.com/2137176.js?file=rvm-part2.sh"></script>
 
 p. Supposing the output of the previous code was:
 
@@ -83,32 +74,26 @@ p. For Ruby / Ruby HEAD (MRI, Rubinius, & REE), install the following:
 ruby: /usr/bin/apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
 
 p. Then we installed all the requirements:
-_> sudo apt-get install /usr/bin/apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion_ 
+<script src="https://gist.github.com/2137176.js?file=rvm-part3.sh"></script>
 
 p. And Tada! We have RVM installed. For more information and details concerning the process, check the again "Ryan Bigg's website":http://ryanbigg.com/2010/12/ubuntu-ruby-rvm-rails-and-you/.
 
 *Ruby*
 
 p. Now that we have RVM installed, installation of Ruby is a piece of cake.
-
-p. _> rvm install 1.9.3_
-_> rvm use 1.9.3_
-_> rvm --default use 1.9.3_
+<script src="https://gist.github.com/2137176.js?file=install-ruby.sh"></script>
 
 p. (From "Agile Web Development with Rails":http://pragprog.com/book/rails4/agile-web-development-with-rails)
 
 *Rails*
 
 p. Before installing Rails we have to install RubyGems and then update it:
-
-p. _> sudo apt-get install rubygems_
-_> sudo gem update --system_
+<script src="https://gist.github.com/2137176.js?file=install-gems.sh"></script>
 
 p. - as shown on "Ubuntu Geek":www.ubuntugeek.com/how-to-install-ruby-on-rails-ror-in-ubuntu.html
 
 p. Now we can install Rails
-
-p. _> gem install rails -v 3.2.1_
+<script src="https://gist.github.com/2137176.js?file=install-rails.sh"></script>
 
 p. And we were done! We installed all the requirements and we have rails up and running. 
 

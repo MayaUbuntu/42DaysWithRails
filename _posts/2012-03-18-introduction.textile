@@ -3,8 +3,6 @@ layout: post
 title: Introduction
 ---
 
-h1. Introduction
-
 p. We started this adventure on February 5th 2012. Up until today we used to meet around three times per week, work roughly around three hours per day. It was good, but not great because progress wasn't as fast as we hoped it to be. The time was enough for me to get hooked to this and want to learn more - which I think was Youssef's intent all along. 
 
 p. AND THEN, we thought of this brilliant idea where I would quit my job and bum it out on my friend's couch, until I learn the brilliant framework that is Ruby on Rails - with a deadline of a month. The things that you do for love. 

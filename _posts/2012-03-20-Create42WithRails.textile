@@ -1,0 +1,78 @@
+---
+layout: post
+title: Creating the Blog
+---
+
+h3. Creation of 42 Days with Rails using Jekyll and Jekyll Bootstrap
+
+p. In order to document this internship, we decided to create the blog: 42 Days with Rails. We opted for Jekyll and Jekyll-Bootstrap to create the blog, because they are just so freaking awesome. Here are the steps we took:
+
+<h3> Install Jekyll </h3>
+
+p. Jekyll is a parsing engine bundled as a ruby gem used to build static websites from dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as “a simple, blog aware, static site generator”. It takes a template directory (representing the raw form of a website), runs it through Textile or Markdown and Liquid converters, and spits out a complete, static website suitable for serving with Apache or your favorite web server.
+For more information, check out "Jekyll Introduction":http://jekyllbootstrap.com/lessons/jekyll-introduction.html and "Mojombo's wiki on Jekyll":https://github.com/mojombo/jekyll/wiki
+
+p. To install it:
+<script src="https://gist.github.com/2137495.js?file=install-jekyll.sh"></script>
+
+If you are using RVM:
+<script src="https://gist.github.com/2137495.js?file=install-jekyll.sh"></script>
+
+p. To run Jekyll:
+In order to get a server up and running with your Jekyll site, run:
+<script src="https://gist.github.com/2137495.js?file=run-jekyll.sh"></script>
+and then browse to http://0.0.0.0:4000. -As stated in "mojombo's wiki":https://github.com/mojombo/jekyll/wiki/Usage
+
+
+p. Now you have jekyll installed on your machine. To make sure it has been installed, check your gems:
+<script src="https://gist.github.com/2137495.js?file=check-gem.sh"></script>
+
+<h3> Create a Repository </h3>
+
+p. Go to "github":https://github.com/ and create a new repository. This is our "42 Days with Rails":https://github.com/MayaUbuntu/42DaysWithRails repository.
+
+<h3> Set up structure of the site: </h3>
+
+p. The basic structure should be as the one shown "here":https://github.com/mojombo/jekyll/wiki/Usage. 
+
+p. Your repository should have the same structure as shown in the figure. 
+For starters, we added the following in our _config.yml:
+_pygments:   false_
+_markdown:   redcarpet_
+_auto:       true_
+
+The content goes to _posts folder. Always make sure the files are of the format: *YEAR-MONTH-DAY-title.textile*
+
+<h3> Download HTML5 Boilerplate </h3> 
+
+p. We used HTML5 Boilerplate to set up our layout. The boilerplate can be downloaded from the "HTML5 Boilerplate website":http://html5boilerplate.com/. We then modified index.html to fit our specifications. We then pushed it to our repository under _layouts/default.html. To check it out, go to the "42DaysWithRails Repository":https://github.com/MayaUbuntu/42DaysWithRails.
+
+p. To push the file to our repository, we do the following steps:
+<script src="https://gist.github.com/2137495.js?file=push-git.sh"></script>
+
+<h3> Use Textile for posts </h3>
+
+p. As previously stated, Jekyll builds static websites from dynamic components such as templates, partials, liquid code, markdown, etc. In our case, the posts were .textile. For references check "The Textile Reference Manual":http://thresholdstate.com/articles/4312/the-textile-reference-manual?ch=2 or "Textism":http://www.textism.com/tools/textile/index.php.
+
+<h3> Jekyll Bootstrap </h3>
+
+p. Jekyll Bootstrap is a lean blogging framework made for developers and designers. To know more about it check out this "introduction":http://jekyllbootstrap.com/api/bootstrap-api.html
+
+p. Since we already have our blog on github, we do the following steps:
+<script src="https://gist.github.com/2137495.js?file=jb.sh"></script>
+
+And see it in action on: http://localhost:4000.
+
+p. The next thing we did, is take all the files and folders necessary from jekyll-bootstrap and integrated them in our directory 42 Days with Rails. Folders such as _includes, _layouts were used from Jekyll-bootstrap, assets for the css, etc.
+
+p. And those were the steps we took to have this blog up and running! 
+
+
+
+
+
+
+
+
+
+

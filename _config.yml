@@ -1,3 +1,15 @@
+exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor]
+
 pygments:   false
 markdown:   redcarpet
 auto:       true
+
+#For Theme
+shorttitle : 42
+title: 42 Days with Rails
+
+production_url : http://MayaUbuntu.github.com
+
+author :
+  name : Maya Osseiran
+  email : oss.maya@gmail.com
